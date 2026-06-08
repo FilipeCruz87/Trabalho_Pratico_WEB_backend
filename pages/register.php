@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../db/Database.php';?>
 <main class="container py-5">
 <?php if (isset($_GET['res'])): ?>
     <div>

@@ -1,25 +1,33 @@
 <?php
-
-
-require_once '../db/Database.php';
+require_once __DIR__ . '/../db/Database.php';
 $db = new Database();
 
-if (!isset($_POST['nome']) ||!isset($_POST['email']) || !isset($_POST['password'])) {
-    header('Location: ?p=register&res=error');
+if (!isset($_POST['nome']) || !isset($_POST['email']) || !isset($_POST['password'])) {
+    header('Location: ../index.php?p=register&res=error');
     exit;
 }
 
-$nome = $_POST['nome'] ?? '';
+$nome  = $_POST['nome']  ?? '';
 $email = $_POST['email'] ?? '';
-$password = $_POST['password'] ?? '';
 
-if (empty($nome) ||empty($email) || empty($password)) {
-    header('Location: ?p=register&res=error');
+if (empty($nome) || empty($email) || empty($_POST['password'])) {
+    header('Location: ../index.php?p=register&res=error');
     exit;
 }
 
-$sql = "INSERT INTO utilizadores (nome,email,password) VALUES (:nome, :email, :password)";
-$result = $db->executeQuery($sql, ['nome' => $nome,'email' => $email, 'password' => $password]);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header('Location: ../index.php?p=register&res=error');
+    exit;
+}
+
+$passwordHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO utilizadores (nome, email, password) VALUES (:nome, :email, :password)";
+$result = $db->executeQuery($sql, [
+    'nome'     => $nome,
+    'email'    => $email,
+    'password' => $passwordHash
+]);
 
 if ($result['status'] === 'success') {
     header('Location: ../index.php?p=login&res=ok');

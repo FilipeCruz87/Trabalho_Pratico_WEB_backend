@@ -1,4 +1,5 @@
-    <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
+<?php require_once __DIR__ . '/../db/Database.php';?>
+<main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
     <div class="row w-100 align-items-center">
             <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column justify-content-center justify-content-md-end align-items-center align-items-md-end animate-on-load slide-right" style="animation-delay: 0.5s;">
                 <ul class="list-unstyled mb-0">

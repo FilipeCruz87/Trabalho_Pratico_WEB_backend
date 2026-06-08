@@ -1,4 +1,5 @@
-    <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
+<?php require_once __DIR__ . '/../db/Database.php';?>
+<main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
     <div class="row w-100">
             <div class="col-12 col-md-5 my-0 d-flex flex-column align-items-center">
                 <img src="../assets/img/foto.jpg" alt="Erro" class="img-fluid animate-on-load fade-up" style="animation-delay: 0.1s; max-height: 250px; object-fit: contain;">

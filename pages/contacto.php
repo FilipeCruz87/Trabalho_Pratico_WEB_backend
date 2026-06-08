@@ -1,4 +1,5 @@
-    <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
+<?php require_once __DIR__ . '/../db/Database.php';?>
+  <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
     <div class="row w-100 align-items-stretch">
             <div class="col-12 col-md-4 h-100 d-flex flex-column justify-content-center align-items-center">
                 <h3 class="mb-4 animate-on-load fade-up" style="animation-delay: 0.1s;">Contactos</h3>
