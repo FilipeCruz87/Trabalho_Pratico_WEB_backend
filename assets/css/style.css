@@ -1,0 +1,337 @@
+/*-- Definiçoes base (cores, body, header, main, footer) --*/
+:root{
+    --fundo: #ebe6db;
+    --cvClaro:#fff6e5;
+    --cvMedio: #f7e2c9;
+    --cvEscuro: #e2c6a5;
+    --cartaoAzul: #0d183e;
+    --cartaoVermelho: #953b4c;
+    --acinzentado: #333231;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--fundo);
+    color: var(--cartaoAzul);
+}
+
+
+/*-- header e butao hamburger (geral) --*/
+header {
+    background-color: var(--fundo);
+    border-bottom: 1px solid var(--acinzentado);
+}
+
+header .active{
+    pointer-events: none;
+    color: var(--cartaoVermelho) !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar-toggler-icon{
+  color: var(--cartaoAzul);
+}
+
+.navbar-toggler-icon:active {
+    color: var(--cartaoVermelho);
+}
+
+.navbar-toggler {
+    border-color: var(--cartaoAzul);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border-color: var(--cartaoVermelho)!important;
+    box-shadow: 0 0 0 0.1rem var(--cartaoVermelho)!important;
+}
+/*-- fim de header e butao hamburger (geral) --*/
+
+
+main{
+  margin-bottom: 120px;
+    
+}
+
+footer {
+  border-top: 1px solid var(--acinzentado);
+  background-color: var(--fundo);
+}
+
+.bi {
+    margin-right: 7px;
+    color: var(--cartaoAzul);
+    font-size: 1.8rem;
+}
+
+a{
+    color: var(--cartaoAzul) !important;
+    text-decoration: none;
+}
+
+a:hover,
+footer .bi:hover{
+    color: var(--cartaoVermelho) !important;
+    text-decoration: underline;
+}
+
+
+/*-- Definiçoes animacoes (geral) --*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-down {
+  opacity: 0;
+  animation: fadeDown 0.8s ease forwards;
+}
+
+.slide-left {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.slide-right {
+  opacity: 0;
+  animation: slideInRight 0.8s ease forwards;
+}
+
+/*-- Definiçoes form, butoes e modal (contacto.html) --*/
+.btn-danger {
+    background-color: var(--cartaoVermelho) !important;
+    border: none !important;
+    color: var(--fundo) !important;
+}
+
+.btn-danger:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.btn-danger:active {
+    opacity: 0.80;
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: var(--cartaoAzul) !important;
+    border: none !important;
+    color: var(--fundo) !important;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    opacity: 0.80;
+    transform: translateY(1px);
+}
+
+.modal-content{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--fundo);
+    color:  var(--cartaoVermelho);
+}
+
+.form-label {
+    color: var(--cartaoAzul);
+}
+
+.form-control {
+    border: 1px solid var(--acinzentado);
+}
+
+.form-control:focus {
+    border-color: var(--fundo);
+    box-shadow: 0 0 0 0.1rem var(--cartaoVermelho);
+}
+
+main section{
+  background-color: var(--cvClaro);
+  border: 1px solid var(--acinzentado);
+  border-color: var(--acinzentado);
+  box-shadow: 0 0 0 0.1rem var(--acinzentado);
+}
+
+#contImg{
+  background-color: var(--fundo);
+  border: none;
+  box-shadow:none;
+}
+
+/*-- Definiçoes acordeao (lusiloc.html) --*/ 
+main section .titulo {
+  color:  var(--cartaoVermelho);
+  text-align: center;
+}
+
+main section .texto{
+  color:  var(--cartaoAzul);
+  text-align: justify;
+}
+
+main .accordion {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+main .accordion-item {
+  background-color: var(--fundo);
+  overflow: hidden;
+  border: 1px solid var(--acinzentado);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+main .accordion-button {
+  background-color: var(--fundo);
+  color: var(--cartaoVermelho);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+main .accordion-button:not(.collapsed) {
+  background-color: var(--fundo);
+  color: var(--cartaoVermelho);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+main .accordion-button:focus {
+  box-shadow: 0 0 0 0.15rem var(--cartaoVermelho);
+}
+
+main .accordion-body {
+  background-color: var(--cvClaro);
+  color: var(--cartaoAzul);
+  border-top: 1px solid var(--acinzentado);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+main .accordion-item + .accordion-item {
+  border-top: 1px solid var(--acinzentado);
+}
+
+main .accordion-button::after {
+  position: absolute;
+  right: 1rem;
+}
+
+
+/*-- Definiçoes tabs (portfolio.html) --*/ 
+.nav-tabs {
+  display: flex;
+  border-bottom: none;
+}
+
+.nav-tabs .nav-item {
+  flex: 1;
+  display: flex;
+  text-align: center;
+}
+
+.nav-tabs .nav-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--cartaoAzul);
+  border-color: var(--acinzentado);
+}
+
+.nav-tabs .nav-link:hover{
+  color: var(--cartaoVermelho);
+  background-color: var(--cvClaro);
+  border-color: var(--acinzentado);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--cartaoVermelho);
+  font-weight: bold;
+  background-color: var(--cvClaro);
+  border-color: var(--acinzentado);
+}
+
+.img-tab {
+  height: 300px;
+  width: 400px;
+}
+
+.tab-pane{
+  border-bottom: none;
+}
+
+.tab-pane.fade {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
+.tab-pane.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-text p{
+  color: var(--cartaoAzul);
+  font-size: 1rem;
+  text-align: center;
+  margin-right: 5;
+  line-height: 3;
+}
+
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
