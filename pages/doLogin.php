@@ -20,7 +20,6 @@ $result = $db->fetchQuery($sql, ['email' => $email]);
 
 if ($result['status'] === 'success' && !empty($result['data'])) {
     $user = $result['data'][0];
-
     if (!password_verify($password, $user['password'])) {
         header('Location: ../index.php?p=login&res=error');
         exit;
@@ -29,6 +28,7 @@ if ($result['status'] === 'success' && !empty($result['data'])) {
     session_start();
     $_SESSION['email'] = $user['email'];
     $_SESSION['tipo']  = $user['tipo'];
+    $_SESSION['nome']  = $user['nome'];
     if ($user['tipo'] === 'admin') {
         header('Location: ../index.php?p=admin');
     } else {

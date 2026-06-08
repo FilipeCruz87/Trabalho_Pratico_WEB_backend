@@ -54,8 +54,8 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'fcruz.teste.web@gmail.com'; // teu gmail
-    $mail->Password   = 'eofn ycgg heuv zwxd';       // App Password do Gmail
+    $mail->Username   = 'fcruz.teste.web@gmail.com';
+    $mail->Password   = 'eofn ycgg heuv zwxd';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
     $mail->CharSet    = 'UTF-8';

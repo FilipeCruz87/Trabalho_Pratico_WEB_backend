@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require_once __DIR__ . '/../db/Database.php';
 $db = new Database();
@@ -62,7 +63,7 @@ if ($filtroId) {
     <h2 class="mb-4">Painel de Administração</h2>
 
     <?php if (isset($_GET['res']) && $_GET['res'] === 'apagado'): ?>
-        <div class="alert alert-success">Utilizador e histórico apagados com sucesso.</div>
+        <div class="alert alert-success">Dados apagados com sucesso.</div>
     <?php endif; ?>
 
     <div class="row gap-4">

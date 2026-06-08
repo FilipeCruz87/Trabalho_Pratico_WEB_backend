@@ -5,7 +5,7 @@
         <?php
         switch ($_GET['res']) {
             case 'error':
-                echo "<p class='error'>Ocorreu um erro ao efetuar o registo.</p>";
+                echo "<p class='alert alert-error'>Ocorreu um erro ao efetuar o registo.</p>";
                 break;
         }
         ?>

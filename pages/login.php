@@ -6,10 +6,10 @@
         <?php
         switch ($_GET['res']) {
             case 'ok':
-                echo "<p class='success'>Registo efetuado com sucesso.</p>";
+                echo "<p class='alert alert-success'>Registo efetuado com sucesso.</p>";
                 break;
             case 'error':
-                echo "<p class='error'>Ocorreu um erro ao efetuar o login.</p>";
+                echo "<p class='alert alert-error'>Ocorreu um erro ao efetuar o login.</p>";
                 break;
         }
         ?>

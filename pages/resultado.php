@@ -30,6 +30,18 @@ if ($result['status'] !== 'success' || empty($result['data'])) {
 $simulacao = $result['data'][0];
 ?>
 
+<?php if (isset($_GET['res'])): ?>
+    <div>
+        <?php
+        switch ($_GET['res']) {
+            case 'erro_email':
+                echo "<p class='alert alert-error'>Erro no envio da simulação.</p>";
+                break;
+        }
+        ?>
+    </div>
+<?php endif; ?>
+
 <main class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
@@ -67,7 +79,7 @@ $simulacao = $result['data'][0];
 
             <div class="d-grid gap-3">
 
-                <form action="/pages/doEnviarSimulacao.php" method="POST">
+                <form action="pages/doEnviarSimulacao.php" method="POST">
                     <input type="hidden" name="simulacao_id" value="<?php echo $simulacaoId ?>">
                     <button type="submit" class="btn btn-primary w-100">
                         Enviar simulação
@@ -77,9 +89,7 @@ $simulacao = $result['data'][0];
                 <a href="../index.php?p=simulacoes" type="submit" class="btn btn-primary w-100">
                     Nova simulação
                 </a>
-
             </div>
-
         </div>
     </div>
 </main>

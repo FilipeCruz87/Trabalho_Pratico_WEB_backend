@@ -28,6 +28,19 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
     exit;
 }
 ?>
+
+<?php if (isset($_GET['res'])): ?>
+    <div>
+        <?php
+        switch ($_GET['res']) {
+            case 'enviado':
+                echo "<p class='alert alert-success'>Simulação enviada com sucesso.</p>";
+                break;
+        }
+        ?>
+    </div>
+<?php endif; ?>
+
 <main class="container flex-grow-1 position-relative py-5">
 
     <div class="position-absolute top-0 end-0 pt-3">
@@ -94,7 +107,7 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
                             Nova Simulação
                         </h2>
 
-                        <h3 class="text-center mb-4">Bem vindo, <?php echo htmlspecialchars($_SESSION['email'], ENT_QUOTES, 'UTF-8')?></h3>
+                        <h3 class="text-center mb-4">Bem vindo, <?php echo htmlspecialchars($_SESSION['nome'], ENT_QUOTES, 'UTF-8')?></h3>
 
                         <form action="/pages/doSimulacao.php" method="POST">
 

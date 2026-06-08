@@ -34,3 +34,4 @@ if ($result['status'] === 'success') {
 } else {
     header('Location: ../index.php?p=register&res=error');
 }
+exit;
