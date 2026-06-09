@@ -1,7 +1,7 @@
 <?php
 
-session_start();
 require_once __DIR__ . '/../db/Database.php';
+
 $db = new Database();
 
 if (!isset($_SESSION['email']) || $_SESSION['tipo'] !== 'admin') {
@@ -55,10 +55,12 @@ if ($filtroId) {
 <main class="container py-5">
 
     <div class="text-end mb-3">
+        <a href="../index.php?p=crud" class="btn btn-primary me-2">Gestão CRUD</a>
     <a href="?p=logout" class="btn btn-primary">
         Logout
     </a>
 </div>
+
 
     <h2 class="mb-4">Painel de Administração</h2>
 

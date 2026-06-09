@@ -1,5 +1,3 @@
-    </main>
-
     
   <footer class="container-fluid text-center mt-auto py-3">
     <div class="row align-items-center">

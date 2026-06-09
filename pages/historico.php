@@ -1,7 +1,7 @@
 <?php
 
-session_start();
 require_once __DIR__ . '/../db/Database.php';
+
 $db = new Database();
 
 if (!isset($_SESSION['email'])) {

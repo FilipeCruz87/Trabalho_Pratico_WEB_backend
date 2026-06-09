@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/../db/Database.php';?>
+<?php 
+require_once __DIR__ . '/../db/Database.php';
+
+?>
   <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
     <div class="row w-100 align-items-stretch">
             <div class="col-12 col-md-4 h-100 d-flex flex-column justify-content-center align-items-center">
@@ -39,3 +42,4 @@
                 </form>
             </div>
         </div>
+            </main>

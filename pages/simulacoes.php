@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+
 require_once __DIR__ . '/../db/Database.php';
 $db = new Database();
 
@@ -58,12 +59,8 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
             </a>
 
         <?php else: ?>
-            
-            <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin'): ?>
-                <a href="?p=admin" class="btn btn-primary me-2">
-                Controlos
-            </a>
-                <?php endif; ?>
+
+            <a href="?p=perfil" class="btn btn-primary me-2">Perfil</a>
 
             <a href="?p=historico" class="btn btn-primary me-2">
                 Histórico
@@ -117,13 +114,13 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
                                 </label>
 
                                 <select name="origem" class="form-select" required>
-    <option value="">-- Seleciona --</option>
-    <?php foreach ($idiomas_origem as $idioma): ?>
-        <option value="<?php echo htmlspecialchars($idioma['idioma_origem'], ENT_QUOTES, 'UTF-8') ?>">
-            <?php echo htmlspecialchars($idioma['idioma_origem'], ENT_QUOTES, 'UTF-8') ?>
-        </option>
-    <?php endforeach; ?>
-</select>
+                                <option value="">-- Seleciona --</option>
+                                <?php foreach ($idiomas_origem as $idioma): ?>
+                                <option value="<?php echo htmlspecialchars($idioma['idioma_origem'], ENT_QUOTES, 'UTF-8') ?>">
+                                <?php echo htmlspecialchars($idioma['idioma_origem'], ENT_QUOTES, 'UTF-8') ?>
+                                </option>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
 
                             <div class="mb-3">
@@ -132,13 +129,13 @@ if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin') {
                                 </label>
 
                                 <select name="destino" class="form-select" required>
-    <option value="">-- Seleciona --</option>
-    <?php foreach ($idiomas_destino as $idioma): ?>
-        <option value="<?php echo htmlspecialchars($idioma['idioma_destino'], ENT_QUOTES, 'UTF-8') ?>">
-            <?php echo htmlspecialchars($idioma['idioma_destino'], ENT_QUOTES, 'UTF-8') ?>
-        </option>
-    <?php endforeach; ?>
-</select>
+                                <option value="">-- Seleciona --</option>
+                                <?php foreach ($idiomas_destino as $idioma): ?>
+                                <option value="<?php echo htmlspecialchars($idioma['idioma_destino'], ENT_QUOTES, 'UTF-8') ?>">
+                                <?php echo htmlspecialchars($idioma['idioma_destino'], ENT_QUOTES, 'UTF-8') ?>
+                                </option>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
 
                             <div class="mb-3">

@@ -1,4 +1,6 @@
-<?php require_once __DIR__ . '/../db/Database.php';?>
+<?php 
+
+require_once __DIR__ . '/../db/Database.php';?>
 <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
     <section id="contImg" class="text-center animate-on-load fade-up" style="animation-delay: 0.1s;">
             <img src="../assets/img/logo2.png" class="img-fluid mt-1 mb-3" style="max-height:180px;" alt="logo">
@@ -37,3 +39,4 @@
                 </div>
             </div>
         </div>
+            </main>

@@ -1,4 +1,6 @@
-<?php require_once __DIR__ . '/../db/Database.php';?>
+<?php 
+
+require_once __DIR__ . '/../db/Database.php';?>
 <main class="container-fluid d-flex justify-content-center align-items-center text-center p-3 mb-0 rounded flex-grow-1">
     <ul class="nav nav-tabs justify-content-center animate-on-load fade-up mb-2" style="animation-delay: 0.1s;" id="gameTabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -98,3 +100,4 @@
         </div>
       </div>
     </div>
+        </main>

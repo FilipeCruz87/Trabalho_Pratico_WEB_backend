@@ -1,7 +1,9 @@
 <?php
-session_start();
+
 require_once __DIR__ . '/../db/Database.php';
 $db = new Database();
+
+session_start();
 
 if (!isset($_SESSION['email'])) {
     header('Location: ../index.php?p=login');
@@ -33,7 +35,7 @@ if ($resultPreco['status'] !== 'success' || empty($resultPreco['data'])) {
 }
 
 $precoPalavra = $resultPreco['data'][0]['preco_palavra'];
-$precoTotal   = $numeroPalavras * $precoPalavra;
+$precoTotal   = round($numeroPalavras * $precoPalavra, 2);
 
 $sqlUser = "SELECT id FROM utilizadores WHERE email = :email";
 $resultUser = $db->fetchQuery($sqlUser, ['email' => $_SESSION['email']]);

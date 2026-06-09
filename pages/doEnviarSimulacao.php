@@ -1,10 +1,11 @@
 <?php
-session_start();
 require_once __DIR__ . '/../db/Database.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+session_start();
 
 $db = new Database();
 
