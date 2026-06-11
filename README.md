@@ -30,4 +30,6 @@ eliminar clientes juntamente com o seu histórico.
 
 
 Eventuais limitações ou ideias futuras: 
-TBD
+Passar o email da página contacos para phpmailer,
+melhorias visuais,
+versão em inglês do site 

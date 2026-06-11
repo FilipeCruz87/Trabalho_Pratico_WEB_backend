@@ -11,7 +11,6 @@ if (!isset($_SESSION['email']) || $_SESSION['tipo'] !== 'admin') {
 
 $secao = $_GET['secao'] ?? 'utilizadores';
 
-// Gera o conteúdo da secção
 ob_start();
 if ($secao === 'utilizadores') {
     include __DIR__ . '/crud/utilizadores.php';
